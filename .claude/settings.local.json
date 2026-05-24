@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/python -m py_compile main.py models/track.py core/metadata.py core/database.py core/player.py core/library_scanner.py utils/helpers.py ui/main_window.py ui/components/player_controls.py ui/components/track_info_panel.py ui/components/playlist_view.py ui/components/library_panel.py ui/components/waveform_bar.py)",
+      "Bash(timeout 5 .venv/bin/python main.py)",
+      "Bash(gtimeout 5 .venv/bin/python main.py)",
+      "Bash(.venv/bin/python *)"
+    ]
+  }
+}

@@ -1,0 +1,477 @@
+/* ============================================================================
+   dark_theme.qss  —  MP3 Player
+   Deep-dark DAW-inspired theme.  Accent: #00E5FF (electric cyan).
+   ============================================================================ */
+
+/* ── Reset / Global ────────────────────────────────────────────────────────── */
+
+* {
+    outline: 0;
+}
+
+QWidget {
+    background-color: #111111;
+    color: #C0C0C0;
+    font-family: "Inter", "SF Pro Text", "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    selection-background-color: #00E5FF30;
+    selection-color: #FFFFFF;
+    border: none;
+}
+
+QMainWindow {
+    background-color: #0D0D0D;
+}
+
+/* ── Splitter ──────────────────────────────────────────────────────────────── */
+
+QSplitter::handle {
+    background-color: #1C1C1C;
+}
+
+QSplitter::handle:horizontal {
+    width: 1px;
+}
+
+QSplitter::handle:hover {
+    background-color: #00E5FF55;
+}
+
+/* ── Library Panel (left sidebar) ─────────────────────────────────────────── */
+
+#libraryPanel {
+    background-color: #141414;
+    border-right: 1px solid #1C1C1C;
+}
+
+#sidebarHeader {
+    background-color: #141414;
+    border-bottom: 1px solid #1C1C1C;
+    min-height: 36px;
+}
+
+#sidebarTitle {
+    color: #444444;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+#searchContainer {
+    background-color: #141414;
+    border-bottom: 1px solid #1C1C1C;
+    padding: 2px 0;
+}
+
+#searchBar {
+    background-color: #1A1A1A;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    color: #CCCCCC;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#searchBar:focus {
+    border-color: #00E5FF55;
+    background-color: #1E1E1E;
+}
+
+#searchBar::placeholder {
+    color: #3A3A3A;
+}
+
+#btnContainer {
+    background-color: #141414;
+    border-bottom: 1px solid #1C1C1C;
+}
+
+#sidebarButton {
+    background-color: #1A1A1A;
+    border: 1px solid #252525;
+    border-radius: 4px;
+    color: #888888;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#sidebarButton:hover {
+    background-color: #222222;
+    border-color: #00E5FF33;
+    color: #BBBBBB;
+}
+
+#sidebarButton:pressed {
+    background-color: #00E5FF18;
+    color: #00E5FF;
+}
+
+#sidebarButton:disabled {
+    color: #333333;
+    border-color: #1A1A1A;
+}
+
+#scanStatus {
+    color: #00E5FF;
+    font-size: 11px;
+    padding: 4px;
+    background-color: #141414;
+}
+
+/* ── Library List ─────────────────────────────────────────────────────────── */
+
+#libraryList {
+    background-color: #141414;
+    border: none;
+    outline: none;
+}
+
+#libraryList::item {
+    padding: 6px 14px;
+    border-bottom: 1px solid #181818;
+    color: #999999;
+    line-height: 1.4;
+    min-height: 42px;
+}
+
+#libraryList::item:hover {
+    background-color: #1A1A1A;
+    color: #CCCCCC;
+}
+
+#libraryList::item:selected {
+    background-color: #00E5FF18;
+    color: #00E5FF;
+}
+
+/* ── Playlist View (centre) ───────────────────────────────────────────────── */
+
+#playlistView {
+    background-color: #0F0F0F;
+}
+
+#panelHeader {
+    background-color: #141414;
+    border-bottom: 1px solid #1C1C1C;
+    min-height: 34px;
+}
+
+#panelTitle {
+    color: #444444;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+#panelSubtitle {
+    color: #383838;
+    font-size: 10px;
+}
+
+/* ── Track Table ──────────────────────────────────────────────────────────── */
+
+#trackTable {
+    background-color: #0F0F0F;
+    alternate-background-color: #111111;
+    border: none;
+    outline: none;
+    gridline-color: transparent;
+    selection-background-color: #00E5FF18;
+    selection-color: #00E5FF;
+    show-decoration-selected: 1;
+}
+
+#trackTable::item {
+    padding: 0 10px;
+    color: #999999;
+    border-bottom: 1px solid #151515;
+}
+
+#trackTable::item:hover {
+    background-color: #181818;
+    color: #CCCCCC;
+}
+
+#trackTable::item:selected {
+    background-color: #00E5FF18;
+    color: #00E5FF;
+}
+
+QHeaderView {
+    background-color: #141414;
+    border: none;
+}
+
+QHeaderView::section {
+    background-color: #141414;
+    color: #424242;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    height: 28px;
+    border: none;
+    border-bottom: 1px solid #1C1C1C;
+    border-right: 1px solid #1C1C1C;
+}
+
+QHeaderView::section:last {
+    border-right: none;
+}
+
+QHeaderView::section:hover {
+    color: #666666;
+}
+
+/* ── Track Info Panel (right sidebar) ─────────────────────────────────────── */
+
+#trackInfoPanel {
+    background-color: #141414;
+    border-left: 1px solid #1C1C1C;
+}
+
+#coverArt {
+    background-color: transparent;
+}
+
+#infoTitle {
+    color: #EEEEEE;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+#infoArtist {
+    color: #00E5FF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#infoAlbum {
+    color: #555555;
+    font-size: 11px;
+}
+
+#separator {
+    background-color: #1C1C1C;
+    max-height: 1px;
+    border: none;
+}
+
+#metaKey {
+    color: #444444;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#metaValue {
+    color: #888888;
+    font-size: 11px;
+}
+
+/* ── Player Controls (bottom bar) ─────────────────────────────────────────── */
+
+#playerControls {
+    background-color: #141414;
+    border-top: 1px solid #1C1C1C;
+}
+
+#controlButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 18px;
+    color: #666666;
+    font-size: 15px;
+    padding: 0;
+}
+
+#controlButton:hover {
+    background-color: #1E1E1E;
+    color: #CCCCCC;
+}
+
+#controlButton:pressed {
+    background-color: #00E5FF22;
+    color: #00E5FF;
+}
+
+#controlButton:checked {
+    color: #00E5FF;
+    background-color: #00E5FF18;
+}
+
+#playButton {
+    background-color: #00E5FF;
+    border: none;
+    border-radius: 18px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0;
+}
+
+#playButton:hover {
+    background-color: #33ECFF;
+}
+
+#playButton:pressed {
+    background-color: #00BFD4;
+}
+
+#trackTitle {
+    color: #CCCCCC;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#timeLabel {
+    color: #444444;
+    font-size: 11px;
+    font-family: "SF Mono", "JetBrains Mono", "Consolas", "Courier New", monospace;
+}
+
+/* ── Volume Slider ────────────────────────────────────────────────────────── */
+
+#volumeSlider {
+    height: 14px;
+}
+
+#volumeSlider::groove:horizontal {
+    background-color: #1E1E1E;
+    height: 3px;
+    border-radius: 2px;
+    margin: 0;
+}
+
+#volumeSlider::sub-page:horizontal {
+    background-color: #00E5FF;
+    height: 3px;
+    border-radius: 2px;
+}
+
+#volumeSlider::add-page:horizontal {
+    background-color: #1E1E1E;
+    height: 3px;
+    border-radius: 2px;
+}
+
+#volumeSlider::handle:horizontal {
+    background-color: #FFFFFF;
+    width: 10px;
+    height: 10px;
+    margin: -4px 0;
+    border-radius: 5px;
+}
+
+#volumeSlider::handle:horizontal:hover {
+    background-color: #00E5FF;
+    width: 12px;
+    height: 12px;
+    margin: -5px 0;
+}
+
+/* ── Scrollbars ───────────────────────────────────────────────────────────── */
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 5px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #2A2A2A;
+    border-radius: 3px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #383838;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    height: 0;
+    background: transparent;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 5px;
+    margin: 0;
+}
+
+QScrollBar::handle:horizontal {
+    background: #2A2A2A;
+    border-radius: 3px;
+    min-width: 24px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #383838;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    width: 0;
+    background: transparent;
+}
+
+/* ── Context Menus ────────────────────────────────────────────────────────── */
+
+QMenu {
+    background-color: #1A1A1A;
+    border: 1px solid #282828;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 7px 20px 7px 14px;
+    border-radius: 4px;
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+QMenu::item:selected {
+    background-color: #00E5FF18;
+    color: #00E5FF;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #252525;
+    margin: 4px 8px;
+}
+
+/* ── Status Bar ───────────────────────────────────────────────────────────── */
+
+QStatusBar {
+    background-color: #0D0D0D;
+    color: #383838;
+    font-size: 11px;
+    border-top: 1px solid #181818;
+}
+
+/* ── Tooltips ─────────────────────────────────────────────────────────────── */
+
+QToolTip {
+    background-color: #1E1E1E;
+    color: #BBBBBB;
+    border: 1px solid #2A2A2A;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+/* ── File dialog (uses system dialog but QWidget parts inherit theme) ──────── */
+
+QFileDialog {
+    background-color: #141414;
+}
